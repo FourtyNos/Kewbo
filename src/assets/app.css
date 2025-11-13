@@ -1,0 +1,88 @@
+/* Seite/BG */
+html, body { height:100%; }
+body {
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    var(--bg-image, url('/assets/background.gif')) center / cover no-repeat fixed;
+  background-color:#111; /* Fallback */
+  display:grid; place-items:center;
+}
+
+/* Layout */
+.wrap { width:min(540px, 92vw); text-align:center; }
+h1 { margin: 20px 0 16px; font-size: clamp(22px, 4vw, 32px); }
+
+/* Buttons */
+.cta{
+  width:100%; padding:14px 16px; margin:10px 0;
+  font-size:18px; border-radius:14px; border:0;
+  background: #e6e6e6; color:#111; cursor:pointer;
+  box-shadow: 0 2px 20px rgba(0,0,0,.25);
+}
+.cta:active{ transform: translateY(1px); }
+.out{ min-height: 1.2em; opacity:.9; }
+
+/* Zahnrad */
+.settings-btn{
+  position: fixed; top: 12px; right: 12px; z-index: 1000;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px; padding: 10px; line-height: 0;
+  cursor: pointer; color: #fff; backdrop-filter: blur(4px);
+}
+.settings-btn svg{ width: 22px; height: 22px; display:block; }
+.settings-btn:focus-visible{ outline: 2px solid #4da3ff; outline-offset: 2px; }
+
+/* Modal */
+.modal[hidden]{ display:none; }
+.modal{ position: fixed; inset: 0; z-index: 1100; }
+.modal__backdrop{ position:absolute; inset:0; background: rgba(0,0,0,.6); }
+
+.modal__dialog{
+  position: relative; margin: 8vh auto; max-width: 520px;
+  background: rgba(193,193,193,0.92); color:#111; border-radius: 24px;
+  border:1px solid rgba(0,0,0,.1); padding: 20px 22px 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.6);
+}
+.modal__header{ display:flex; align-items:center; justify-content:space-between; gap:8px; padding-bottom:8px; border-bottom:1px solid rgba(0,0,0,.08); }
+.modal__close{ background:transparent; border:0; font-size:22px; cursor:pointer; line-height:1; }
+
+.modal__grid{ display:grid; gap:12px; }
+.section-title{ font-weight:700; text-align:center; margin:8px 0 4px; }
+.modal label{ font-weight:600; }
+.modal input{
+  width:100%; padding:10px 12px; border-radius:10px; border:1px solid #cfcfcf; background:#fff;
+}
+.row{ margin-top:8px; }
+
+/* Actions-Zeile mit Ko-fi links & Save rechts */
+.actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-top:14px;
+}
+.actions-left,
+.actions-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.actions .kofi-link img{
+  height:36px;
+  display:block;
+}
+
+/* Upload-Zeile */
+.file-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:8px; }
+.hint { display:block; opacity:.8; font-size:.9em; margin-top:4px; }
+
+/* Variante B1: Wenn Modal offen, Inhalt + Zahnrad ausblenden */
+body.modal-open .wrap,
+body.modal-open .settings-btn {
+  visibility: hidden;
+}
