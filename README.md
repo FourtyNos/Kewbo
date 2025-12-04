@@ -34,7 +34,7 @@ Background images are stored locally as data URLs.
 
 ## Usage
 
-Visit the site. [Kewbo.Tech-industries.de](Kewbo.Tech-industries.de)
+Visit the site. [Kewbo.Tech-industries.de](https://Kewbo.Tech-industries.de)
 
 Click the gear icon → Settings.
 
