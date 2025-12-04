@@ -34,15 +34,14 @@ Background images are stored locally as data URLs.
 
 ## Usage
 
-Visit the site. [Kewbo.Tech-industries.de](https://Kewbo.Tech-industries.de)
+Visit the site with your smartphone where you want to get access [Kewbo.Tech-industries.de](https://Kewbo.Tech-industries.de)
 
 Click the gear icon → Settings.
 
-Enter names and webhook URLs for Button 1 & 2.
+Enter names and webhook URLs for Button 1 & 2. 
+(From your automation in Home assistant)
 
 The webhook inputs are password-type fields and remain blank when reopening; only new entries overwrite stored values.
-
-(Optional) Background → “Choose image” → select GIF/PNG/JPG → applied instantly and works offline.
 
 Click Save.
 
